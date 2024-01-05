@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="dashboard">
+        <div class="user-info">
+          <img
+            class="avatar"
+            src="./images/image-jeremy.png"
+            alt="avatar for Jeremy"
+          />
+
+          <div>
+            <p>Report for</p>
+            <div class="name">Jeremy Robson</div>
+          </div>
+        </div>
+        <div class="tracking-periods">
+          <p>Daily</p>
+          <p>Weekly</p>
+          <p>Monthly</p>
+        </div>
+      </div>
+
+      <div class="cards work">
+        <div class="card-icon">
+          <img src="./images/icon-work.svg" alt="work icon" />
+        </div>
+        <div class="tracking-info">
+          <div class="card">
+            <p class="card-title card-work">Work</p>
+            <img src="./images/icon-ellipsis.svg" alt="icon ellipsis" />
+          </div>
+          <div class="time">
+            <p class="tracked-time">32hrs</p>
+            <p class="weekly-tracked-time">Last week - <span>36hrs</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards play">
+        <div class="card-icon">
+          <img src="./images/icon-play.svg" alt="icon-play" />
+        </div>
+        <div class="tracking-info">
+          <div class="card">
+            <p class="card-title card-play" id="play">Play</p>
+            <img src="./images/icon-ellipsis.svg" alt="icon ellipsis" />
+          </div>
+
+          <div class="time">
+            <p class="tracked-time">10hrs</p>
+            <p class="weekly-tracked-time">Last week - <span>36hrs</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards study">
+        <div class="card-icon">
+          <img src="./images/icon-study.svg" alt="icon-study" />
+        </div>
+        <div class="tracking-info">
+          <div class="card">
+            <p class="card-title card-sudy" id="study">Study</p>
+            <img src="./images/icon-ellipsis.svg" alt="icon ellipsis" />
+          </div>
+          <div class="time">
+            <p class="tracked-time">4hrs</p>
+            <p class="weekly-tracked-time">Last week - <span>36hrs</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards exercise">
+        <div class="card-icon">
+          <img src="./images/icon-exercise.svg" alt="icon-exercise" />
+        </div>
+        <div class="tracking-info">
+          <div class="card">
+            <p class="card-title card-exercise" id="exercise">Exercise</p>
+            <img src="./images/icon-ellipsis.svg" alt="icon ellipsis" />
+          </div>
+          <div class="time">
+            <p class="tracked-time">4hrs</p>
+            <p class="weekly-tracked-time">Last week - <span>36hrs</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards social">
+        <div class="card-icon">
+          <img src="./images/icon-social.svg" alt="icon-social" />
+        </div>
+        <div class="tracking-info">
+          <div class="card">
+            <p class="card-title card-social" id="social">Social</p>
+            <img src="./images/icon-ellipsis.svg" alt="icon ellipsis" />
+          </div>
+          <div class="time">
+            <p class="tracked-time">5hrs</p>
+            <p class="weekly-tracked-time">Last week - <span>36hrs</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards self-care">
+        <div class="card-icon">
+          <img src="./images/icon-self-care.svg" alt="icon-self-care" />
+        </div>
+        <div class="tracking-info">
+          <div class="card">
+            <p class="card-title card-self-care" id="self-care">Self Care</p>
+            <img src="./images/icon-ellipsis.svg" alt="icon ellipsis" />
+          </div>
+          <div class="time">
+            <p class="tracked-time">2hrs</p>
+            <p class="weekly-tracked-time">Last week - <span>36hrs</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://twitter.com/home">Viki Wainaina</a>.
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+.flex-items, .main-container .cards .tracking-info .card, .main-container .dashboard .user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-styles, .main-container .dashboard {
+  grid-row: span 2;
+  padding-block-end: 1.5em;
+  border-radius: 12px;
+  background: hsl(235, 46%, 20%);
+}
+
+.cards-styles, .main-container .cards {
+  position: relative;
+  border-radius: 16px;
+  height: 100%;
+  background-color: yellowgreen;
+}
+
+.tracking-info-styles, .main-container .cards .tracking-info {
+  background-color: hsl(235, 46%, 20%);
+  padding: 1.5em;
+  border-radius: 12px;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(226, 43%, 10%);
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 20px;
+}
+.main-container .dashboard .user-info {
+  border-radius: 12px;
+  background: hsl(246, 80%, 60%);
+  padding-inline: 1.5em;
+  padding-block: 1.5em 3em;
+}
+.main-container .dashboard .user-info .avatar {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-block-end: 20px;
+}
+.main-container .dashboard .user-info p {
+  font-size: 0.7rem;
+  color: hsl(236, 100%, 87%);
+  margin-block-end: 5px;
+}
+.main-container .dashboard .user-info .name {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #fff;
+}
+.main-container .dashboard .tracking-periods {
+  padding-inline: 1.5em;
+}
+.main-container .dashboard .tracking-periods p {
+  margin-top: 10px;
+  color: hsl(236, 100%, 87%);
+  transition: all 0.4s ease;
+}
+.main-container .dashboard .tracking-periods p:hover {
+  cursor: pointer;
+  color: #fff;
+}
+.main-container .cards .card-icon img {
+  width: 42px;
+  height: 42px;
+  margin-left: 75%;
+}
+.main-container .cards .tracking-info .card {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-end: 20px;
+}
+.main-container .cards .tracking-info .card .card-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #fff;
+}
+.main-container .cards .tracking-info .tracked-time {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #fff;
+}
+.main-container .cards .tracking-info .weekly-tracked-time {
+  font-size: 0.8rem;
+  color: hsl(236, 100%, 87%);
+  margin-top: 10px;
+}
+.main-container .work {
+  background-color: hsl(15, 100%, 70%);
+}
+.main-container .play {
+  background-color: hsl(195, 74%, 62%);
+}
+.main-container .study {
+  background-color: hsl(348, 100%, 68%);
+}
+.main-container .exercise {
+  background-color: hsl(145, 58%, 55%);
+}
+.main-container .social {
+  background-color: hsl(264, 64%, 52%);
+}
+.main-container .self-care {
+  background-color: hsl(43, 84%, 65%);
+}
+
+.attribution {
+  margin-block-start: 40px;
+  font-size: 0.8rem;
+  text-align: center;
+  color: hsl(145, 58%, 55%);
+}
+
+.attribution a {
+  color: hsl(43, 84%, 65%);
+}
+
+@media (max-width: 1200px) {
+  .main-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .main-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  body {
+    padding: 1em;
+  }
+  .main-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .main-container .dashboard {
+    padding-block-end: 1em;
+  }
+  .main-container .dashboard .user-info {
+    flex-direction: row;
+    gap: 20px;
+    padding-block: 1em 0.5em;
+  }
+  .main-container .dashboard .user-info .name {
+    font-size: 1rem;
+  }
+  .main-container .dashboard .tracking-periods {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .main-container .cards .tracking-info .time {
+    display: flex;
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=style.css.map */

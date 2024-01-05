@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+$Blue: hsl(246, 80%, 60%);
+$Light-red: hsl(15, 100%, 70%);
+$Soft-blue: hsl(195, 74%, 62%);
+$Watermelon: hsl(348, 100%, 68%);
+$Lime-green: hsl(145, 58%, 55%);
+$Violet: hsl(264, 64%, 52%);
+$Soft-orange: hsl(43, 84%, 65%);
+$Very-dark-blue: hsl(226, 43%, 10%);
+$Dark-blue: hsl(235, 46%, 20%);
+$Desaturated-blue: hsl(235, 45%, 61%);
+$Pale-Blue: hsl(236, 100%, 87%);
+$Font-size: 1.125rem;
+$font-default: "Rubik", sans-serif;
+$transition: all 0.4s ease;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  // padding: 0;
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+.flex-items {
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-styles {
+  grid-row: span 2;
+  padding-block-end: 1.5em;
+  border-radius: 12px;
+  background: $Dark-blue;
+}
+
+.cards-styles {
+  position: relative;
+  border-radius: 16px;
+  height: 100%;
+  background-color: yellowgreen;
+}
+.tracking-info-styles {
+  background-color: $Dark-blue;
+  padding: 1.5em;
+  border-radius: 12px;
+}
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  font-family: $font-default;
+  background-color: $Very-dark-blue;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 20px;
+
+  .dashboard {
+    @extend .dashboard-styles;
+
+    .user-info {
+      @extend .flex-items;
+      border-radius: 12px;
+      background: $Blue;
+      padding-inline: 1.5em;
+      padding-block: 1.5em 3em;
+
+      .avatar {
+        width: 48px;
+        height: 48px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        margin-block-end: 20px;
+      }
+      p {
+        font-size: 0.7rem;
+        color: $Pale-Blue;
+        margin-block-end: 5px;
+      }
+      .name {
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #fff;
+      }
+    }
+    .tracking-periods {
+      padding-inline: 1.5em;
+      p {
+        margin-top: 10px;
+        color: $Pale-Blue;
+        transition: $transition;
+      }
+      p:hover {
+        cursor: pointer;
+        color: #fff;
+      }
+    }
+  }
+  .cards {
+    @extend .cards-styles;
+
+    .card-icon {
+      img {
+        width: 42px;
+        height: 42px;
+        margin-left: 75%;
+      }
+    }
+    .tracking-info {
+      @extend .tracking-info-styles;
+
+      .card {
+        @extend .flex-items;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-block-end: 20px;
+
+        .card-title {
+          font-size: $Font-size;
+          font-weight: 500;
+          color: #fff;
+        }
+      }
+      .tracked-time {
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #fff;
+      }
+      .weekly-tracked-time {
+        font-size: 0.8rem;
+        color: $Pale-Blue;
+        margin-top: 10px;
+      }
+    }
+  }
+  .work {
+    background-color: $Light-red;
+  }
+  .play {
+    background-color: $Soft-blue;
+  }
+  .study {
+    background-color: $Watermelon;
+  }
+  .exercise {
+    background-color: $Lime-green;
+  }
+  .social {
+    background-color: $Violet;
+  }
+  .self-care {
+    background-color: $Soft-orange;
+  }
+}
+//Footer
+.attribution {
+  margin-block-start: 40px;
+  font-size: 0.8rem;
+  text-align: center;
+  color: $Lime-green;
+}
+.attribution a {
+  color: $Soft-orange;
+}
+
+@media (max-width: 1200px) {
+  .main-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .main-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  body {
+    padding: 1em;
+  }
+  .main-container {
+    grid-template-columns: repeat(1, 1fr);
+
+    .dashboard {
+      padding-block-end: 1em;
+      
+      .user-info {
+        @extend .flex-items;
+        flex-direction: row;
+        gap: 20px;
+        padding-block: 1em .5em;
+  
+        .name {
+          font-size: 1rem;
+        }
+      }
+      .tracking-periods {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    .cards {
+      .tracking-info {
+        .time {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
