@@ -1,6 +1,6 @@
 # Frontend Mentor - Time tracking dashboard
 
-![Design preview for the Time tracking dashboard coding challenge](./design/Screenshot%20Time%20tracking%20dashboard.png)
+![Design preview for the Time tracking dashboard coding challenge](./design/ScreenshotFrontend%20Mentor%20Time%20tracking%20dashboard.png)
 
 ## Welcome! 👋
 
