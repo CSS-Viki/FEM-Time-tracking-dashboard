@@ -23,13 +23,14 @@ $transition: all 0.4s ease;
 
 * {
   margin: 0;
-  // padding: 0;
 }
 img,
 svg {
   display: block;
   max-width: 100%;
 }
+
+// Extend classes
 .flex-items {
   display: flex;
   flex-direction: column;
@@ -41,17 +42,13 @@ svg {
   background: $Dark-blue;
 }
 
-.cards-styles {
-  position: relative;
-  border-radius: 16px;
-  height: 100%;
-  background-color: yellowgreen;
-}
 .tracking-info-styles {
   background-color: $Dark-blue;
   padding: 1.5em;
   border-radius: 12px;
+  transition: $transition;
 }
+
 body {
   display: grid;
   place-content: center;
@@ -60,6 +57,7 @@ body {
   background-color: $Very-dark-blue;
 }
 
+// CONTAINER STYLES
 .main-container {
   display: grid;
   grid-template-columns: repeat(4, 200px);
@@ -67,20 +65,21 @@ body {
 
   .dashboard {
     @extend .dashboard-styles;
+    @extend .flex-items;
 
     .user-info {
       @extend .flex-items;
       border-radius: 12px;
       background: $Blue;
       padding-inline: 1.5em;
-      padding-block: 1.5em 3em;
+      padding-block: 1.5em 5em;
 
       .avatar {
         width: 48px;
         height: 48px;
         border: 2px solid #fff;
         border-radius: 50%;
-        margin-block-end: 20px;
+        margin-block-end: 40px;
       }
       p {
         font-size: 0.7rem;
@@ -88,32 +87,37 @@ body {
         margin-block-end: 5px;
       }
       .name {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: 300;
         color: #fff;
       }
     }
     .tracking-periods {
       padding-inline: 1.5em;
+      margin-top: auto;
       p {
         margin-top: 10px;
         color: $Pale-Blue;
         transition: $transition;
       }
-      p:hover {
+      p:hover,
+      p.active {
         cursor: pointer;
         color: #fff;
       }
     }
   }
   .cards {
-    @extend .cards-styles;
+    border-radius: 16px;
+    
 
     .card-icon {
+      @extend .flex-items;
+      align-items: flex-end;
+      padding-inline: 1.5em;
       img {
-        width: 42px;
-        height: 42px;
-        margin-left: 75%;
+        width: 36px;
+        height: 36px;
       }
     }
     .tracking-info {
@@ -133,7 +137,7 @@ body {
         }
       }
       .tracked-time {
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 300;
         color: #fff;
       }
@@ -142,6 +146,10 @@ body {
         color: $Pale-Blue;
         margin-top: 10px;
       }
+    }
+    .tracking-info:hover {
+      cursor: pointer;
+      opacity: .7;
     }
   }
   .work {
@@ -163,6 +171,7 @@ body {
     background-color: $Soft-orange;
   }
 }
+
 //Footer
 .attribution {
   margin-block-start: 40px;
@@ -193,13 +202,13 @@ body {
 
     .dashboard {
       padding-block-end: 1em;
-      
+
       .user-info {
         @extend .flex-items;
         flex-direction: row;
         gap: 20px;
-        padding-block: 1em .5em;
-  
+        padding-block: 1em 0.5em;
+
         .name {
           font-size: 1rem;
         }
@@ -212,9 +221,20 @@ body {
     }
     .cards {
       .tracking-info {
+        .card {
+          margin-block-end: 10px;
+        }
         .time {
           display: flex;
           justify-content: space-between;
+          align-items: center;
+          
+          .tracked-time {
+            font-size: 1.3rem;
+          }
+          .weekly-tracked-time {
+            margin-top: 0;
+          }
         }
       }
     }

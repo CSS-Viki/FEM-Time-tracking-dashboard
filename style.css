@@ -15,7 +15,7 @@ svg {
   max-width: 100%;
 }
 
-.flex-items, .main-container .cards .tracking-info .card, .main-container .dashboard .user-info {
+.flex-items, .main-container .cards .tracking-info .card, .main-container .cards .card-icon, .main-container .dashboard .user-info, .main-container .dashboard {
   display: flex;
   flex-direction: column;
 }
@@ -27,17 +27,11 @@ svg {
   background: hsl(235, 46%, 20%);
 }
 
-.cards-styles, .main-container .cards {
-  position: relative;
-  border-radius: 16px;
-  height: 100%;
-  background-color: yellowgreen;
-}
-
 .tracking-info-styles, .main-container .cards .tracking-info {
   background-color: hsl(235, 46%, 20%);
   padding: 1.5em;
   border-radius: 12px;
+  transition: all 0.4s ease;
 }
 
 body {
@@ -57,14 +51,14 @@ body {
   border-radius: 12px;
   background: hsl(246, 80%, 60%);
   padding-inline: 1.5em;
-  padding-block: 1.5em 3em;
+  padding-block: 1.5em 5em;
 }
 .main-container .dashboard .user-info .avatar {
   width: 48px;
   height: 48px;
   border: 2px solid #fff;
   border-radius: 50%;
-  margin-block-end: 20px;
+  margin-block-end: 40px;
 }
 .main-container .dashboard .user-info p {
   font-size: 0.7rem;
@@ -72,26 +66,34 @@ body {
   margin-block-end: 5px;
 }
 .main-container .dashboard .user-info .name {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 300;
   color: #fff;
 }
 .main-container .dashboard .tracking-periods {
   padding-inline: 1.5em;
+  margin-top: auto;
 }
 .main-container .dashboard .tracking-periods p {
   margin-top: 10px;
   color: hsl(236, 100%, 87%);
   transition: all 0.4s ease;
 }
-.main-container .dashboard .tracking-periods p:hover {
+.main-container .dashboard .tracking-periods p:hover,
+.main-container .dashboard .tracking-periods p.active {
   cursor: pointer;
   color: #fff;
 }
+.main-container .cards {
+  border-radius: 16px;
+}
+.main-container .cards .card-icon {
+  align-items: flex-end;
+  padding-inline: 1.5em;
+}
 .main-container .cards .card-icon img {
-  width: 42px;
-  height: 42px;
-  margin-left: 75%;
+  width: 36px;
+  height: 36px;
 }
 .main-container .cards .tracking-info .card {
   flex-direction: row;
@@ -105,7 +107,7 @@ body {
   color: #fff;
 }
 .main-container .cards .tracking-info .tracked-time {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 300;
   color: #fff;
 }
@@ -113,6 +115,10 @@ body {
   font-size: 0.8rem;
   color: hsl(236, 100%, 87%);
   margin-top: 10px;
+}
+.main-container .cards .tracking-info:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
 .main-container .work {
   background-color: hsl(15, 100%, 70%);
@@ -177,8 +183,18 @@ body {
     align-items: center;
     justify-content: space-between;
   }
+  .main-container .cards .tracking-info .card {
+    margin-block-end: 10px;
+  }
   .main-container .cards .tracking-info .time {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+  .main-container .cards .tracking-info .time .tracked-time {
+    font-size: 1.3rem;
+  }
+  .main-container .cards .tracking-info .time .weekly-tracked-time {
+    margin-top: 0;
   }
 }/*# sourceMappingURL=style.css.map */
