@@ -29,7 +29,7 @@ Your users should be able to:
 - The text for the previous period's time should change based on the active timeframe. For Daily, it should read "Yesterday" e.g "Yesterday - 2hrs". For Weekly, it should read "Last Week" e.g. "Last Week - 32hrs". For monthly, it should read "Last Month" e.g. "Last Month - 19hrs".
 
 ### Process
-This is by far my most frustrating but fulfilling project i have done from fronten mentor😂😂 especially trying to breakdown async function to work with the synchronous one. Check out the finished site below👇🏽
+This is by far my most frustrating but fulfilling project i have done from frontend mentor😂😂 especially trying to make my async function to work with the synchronous one. Check out the finished site below👇🏽
 
 - Live Site URL: [Live site](https://time-tracking-dashboard-project.onrender.com)
 
